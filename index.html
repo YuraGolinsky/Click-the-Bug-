@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🐞 Click the Bug!</title>
+<link rel="stylesheet" href="skyle.css">
+
+</head>
+<body>
+  <!-- Темная тема -->
+  <button id="themeToggle" onclick="toggleTheme()">🌙</button>
+
+  <!-- Главное меню -->
+  <div id="menu">
+    <h1>🐞 Click the Bug!</h1>
+    <p>Click on bugs to score points! Watch out for fake ones.
+       Golden bugs = +5. Bad bugs = -3. 30 seconds to win!</p>
+    <p>Select difficulty:</p>
+    <div>
+      <button class="button" onclick="startGame('easy')">Easy</button>
+      <button class="button" onclick="startGame('medium')">Medium</button>
+      <button class="button" onclick="startGame('hard')">Hard</button>
+    </div>
+  </div>
+
+  <!-- Табло счёта -->
+  <div id="scoreBoard">
+    <div>⏱ Time: <span id="time">30</span> sec</div>
+    <div>🏆 Score: <span id="score">0</span></div>
+  </div>
+
+  <!-- Звуки -->
+  <audio id="clickSound" src="https://www.soundjay.com/button/sounds/button-16.mp3" preload="auto"></audio>
+  <audio id="winSound" src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" preload="auto"></audio>
+  <audio id="loseSound" src="https://www.soundjay.com/button/sounds/button-10.mp3" preload="auto"></audio>
+
+  <script src="script.js" defer></script>
+
+</body>
+</html>
